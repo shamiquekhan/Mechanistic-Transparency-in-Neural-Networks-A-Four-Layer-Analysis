@@ -30,15 +30,17 @@ A complete 4-phase mechanistic interpretability pipeline proving neural networks
 
 ## Key Results
 - Data untangles 3×, compresses to 6D
-- 93.17% MNIST accuracy
+- 93.17% MNIST accuracy (clean)
 - Most neurons are polysemantic, some monosemantic
 - Circuits are sparse and modular
 - Causal bugs can be injected and surgically fixed
+- Backdoor bug (7→1) injected and surgically fixed (ROME)
+- After edit: Digit 7 accuracy 91.63%, overall 90.22%, <0.3% of network changed, minimal side effects
 
 ## Documentation
 - All results, outputs, and summaries are in the repo
-- See `dnn-experiment/result.md` for raw outputs
-- See `dnn-experiment/EXPERIMENT_SUMMARY.md` for executive summary
+- See `dnn-experiment/result.md` for raw outputs and per-phase details
+- See `dnn-experiment/EXPERIMENT_SUMMARY.md` for executive summary and latest metrics
 
 ---
 
