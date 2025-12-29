@@ -1,0 +1,20 @@
+{
+  "input": {
+    "intrinsic_dim_95": 152,
+    "intrinsic_dim_90": 87,
+    "mean_curvature": 12.604153633117676,
+    "separability_ratio": 0.7526407241821289
+  },
+  "hidden": {
+    "intrinsic_dim_95": 13,
+    "intrinsic_dim_90": 10,
+    "mean_curvature": 1.3034430742263794,
+    "separability_ratio": 1.5251450538635254
+  },
+  "output": {
+    "intrinsic_dim_95": 6,
+    "intrinsic_dim_90": 5,
+    "mean_curvature": 0.8088283538818359,
+    "separability_ratio": 2.202892303466797
+  }
+}
