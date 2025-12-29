@@ -38,16 +38,15 @@
   - phase2_neuron7_top_activations.png
 
 ## Phase 3: Circuit Analysis
-- **(See analysis/phase3_circuit_analysis.json if generated)**
-- **Visualizations:**
-  - (If generated) phase3_circuit_diagram.png
-  - (If generated) phase3_ablation_results.png
+- **See console output for top neurons and weights per digit class.**
+- **No JSON output generated for this phase in current run.**
 
 ## Phase 4: Causal Interventions
-- **(See analysis/phase4_causal_interventions.json if generated)**
-- **Visualizations:**
-  - (If generated) phase4_before_after_comparison.png
-  - (If generated) phase4_editing_dashboard.png
+- **Causal tracing complete. Activations saved for further analysis.**
+- **Responsible layer: fc1. Surgical editing complete. Model saved as best_model_rome.pth.**
+- **Validation:**
+  - Overall accuracy: 90.22%
+  - Accuracy on digit 7: 91.63%
 
 ## All Analysis Files
 - geometric_properties.json

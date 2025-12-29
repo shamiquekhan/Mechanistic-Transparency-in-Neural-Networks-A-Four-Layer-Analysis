@@ -37,17 +37,17 @@
     ]
   },
   "phase3_circuit_analysis": {
-    "visualizations": [
-      "phase3_circuit_diagram.png",
-      "phase3_ablation_results.png"
-    ],
-    "circuit_analysis_file": "phase3_circuit_analysis.json"
+    "summary": "See console output for top neurons and weights per digit class.",
+    "note": "No JSON output generated for this phase in current run. See script output for details."
   },
   "phase4_causal_interventions": {
-    "visualizations": [
-      "phase4_before_after_comparison.png",
-      "phase4_editing_dashboard.png"
-    ],
+    "causal_tracing": "Causal tracing complete. Activations saved for further analysis.",
+    "surgical_editing": "Responsible layer: fc1. Surgical editing complete. Model saved as best_model_rome.pth.",
+    "validation": {
+      "overall_accuracy": 90.22,
+      "accuracy_digit_7": 91.63
+    }
+  }
     "causal_interventions_file": "phase4_causal_interventions.json"
   },
   "documentation": [
