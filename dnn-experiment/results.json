@@ -1,0 +1,59 @@
+{
+  "phase1_geometric_transparency": {
+    "intrinsic_dimensionality": {
+      "input": {"95%": 152, "90%": 87},
+      "hidden": {"95%": 13, "90%": 10},
+      "output": {"95%": 6, "90%": 5}
+    },
+    "mean_curvature": {
+      "input": 12.60,
+      "hidden": 1.30,
+      "output": 0.81
+    },
+    "separability_ratio": {
+      "input": 0.75,
+      "hidden": 1.53,
+      "output": 2.20
+    },
+    "visualizations": [
+      "phase1_training_curves.png",
+      "phase1_pca_variance.png",
+      "phase1_separability.png",
+      "phase1_umap_projections.png",
+      "phase1_summary_table.png"
+    ]
+  },
+  "phase2_feature_transparency": {
+    "num_neurons": 16,
+    "monosemantic_neurons": 2,
+    "polysemantic_neurons": 14,
+    "feature_interpretability_file": "phase2_feature_interpretability.json",
+    "visualizations": [
+      "phase2_neuron_preference_heatmap.png",
+      "phase2_selectivity_distribution.png",
+      "phase2_neuron_specialization_pie.png",
+      "phase2_neuron0_top_activations.png",
+      "phase2_neuron7_top_activations.png"
+    ]
+  },
+  "phase3_circuit_analysis": {
+    "visualizations": [
+      "phase3_circuit_diagram.png",
+      "phase3_ablation_results.png"
+    ],
+    "circuit_analysis_file": "phase3_circuit_analysis.json"
+  },
+  "phase4_causal_interventions": {
+    "visualizations": [
+      "phase4_before_after_comparison.png",
+      "phase4_editing_dashboard.png"
+    ],
+    "causal_interventions_file": "phase4_causal_interventions.json"
+  },
+  "documentation": [
+    "README.md",
+    "EXPERIMENT_SUMMARY.md",
+    "PHASE_OUTPUTS_INDEX.md",
+    "result.md"
+  ]
+}
