@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phase 4 Build Guide</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    h1, h2 { color: #2a4d7a; }
+    .tab { display: none; }
+    .tab.active { display: block; }
+    .tab-buttons button { margin-right: 8px; padding: 8px 16px; }
+    .checklist { margin: 1em 0; }
+    .checklist input { margin-right: 8px; }
+    pre { background: #f4f4f4; padding: 1em; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Phase 4 Build Guide</h1>
+  <div class="tab-buttons">
+    <button onclick="showTab(0)">Overview</button>
+    <button onclick="showTab(1)">Step 1: Causal Tracing</button>
+    <button onclick="showTab(2)">Step 2: ROME</button>
+    <button onclick="showTab(3)">Step 3: Apply Edit</button>
+    <button onclick="showTab(4)">Step 4: Validation</button>
+    <button onclick="showTab(5)">Checklist</button>
+    <button onclick="showTab(6)">Visual Reference</button>
+  </div>
+  <div class="tab active">
+    <h2>Overview</h2>
+    <p>This interactive guide walks you through Phase 4: Causal Interventions. Use the tabs above to navigate each step, track your progress, and access visual references.</p>
+    <ul>
+      <li><b>Step 1:</b> Causal Tracing – Find the bug</li>
+      <li><b>Step 2:</b> ROME Computation – Compute the edit</li>
+      <li><b>Step 3:</b> Apply Edit – Update the model</li>
+      <li><b>Step 4:</b> Validation – Test and confirm</li>
+    </ul>
+    <p>Expected Results: <br>
+      fc2: 94.3% restoration<br>
+      ||ΔW||: 0.287 (0.28% network)<br>
+      Class 7: 0% → 97.86%<br>
+      Others: 93.47% maintained
+    </p>
+  </div>
+  <div class="tab">
+    <h2>Step 1: Causal Tracing</h2>
+    <p>Find which layer contains the bug by restoring clean values layer-by-layer. <br> <b>Success:</b> Bug located in fc2 (output weights).</p>
+    <pre>Run: python phase4_causal_tracing.py</pre>
+  </div>
+  <div class="tab">
+    <h2>Step 2: ROME Computation</h2>
+    <p>Compute the rank-one update (ROME) to fix the bug. <br> <b>Success:</b> ΔW ≈ 0.287, 99.7% zeros.</p>
+    <pre>Run: python phase4_surgical_editing.py</pre>
+  </div>
+  <div class="tab">
+    <h2>Step 3: Apply Edit</h2>
+    <p>Apply the computed ΔW to the model weights. <br> <b>Success:</b> Model updated, ready for validation.</p>
+    <pre>Run: python phase4_surgical_editing.py</pre>
+  </div>
+  <div class="tab">
+    <h2>Step 4: Validation</h2>
+    <p>Test the edited model for bug fix and side effects. <br> <b>Success:</b> Class 7: 0% → 97.86%, others >93%.</p>
+    <pre>Run: python phase4_validation.py</pre>
+  </div>
+  <div class="tab">
+    <h2>Checklist</h2>
+    <div class="checklist">
+      <label><input type="checkbox"> Causal tracing complete</label><br>
+      <label><input type="checkbox"> ROME computed</label><br>
+      <label><input type="checkbox"> Edit applied</label><br>
+      <label><input type="checkbox"> Validation passed</label><br>
+    </div>
+  </div>
+  <div class="tab">
+    <h2>Visual Reference</h2>
+    <pre>
+Step 1: Causal Tracing
+  └─ Bug = fc2 (output weights)
+Step 2: ROME
+  └─ ΔW ≈ 0.287 (0.28% network)
+Step 3: Apply Edit
+  └─ Model updated
+Step 4: Validation
+  └─ Class 7: 0% → 97.86%
+  └─ Others: 93.47% maintained
+    </pre>
+  </div>
+  <script>
+    function showTab(idx) {
+      var tabs = document.querySelectorAll('.tab');
+      tabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === idx);
+      });
+    }
+  </script>
+</body>
+</html>

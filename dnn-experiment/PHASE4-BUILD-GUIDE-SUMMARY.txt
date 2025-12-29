@@ -1,0 +1,9 @@
+PHASE4-BUILD-GUIDE-SUMMARY.txt
+
+- Use Phase4-BUILD-GUIDE.html for interactive, tabbed learning
+- See Phase4-Complete-Guide.md for theory and math
+- Use Phase4-Quick-Start.md for code
+- Track with Phase4-EXECUTION-CHECKLIST.md
+- Visuals in PHASE4-VISUAL-REFERENCE.txt
+
+Start with the HTML guide, then follow the checklist and quick start for execution.

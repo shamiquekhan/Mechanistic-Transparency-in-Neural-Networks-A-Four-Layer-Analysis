@@ -1,0 +1,20 @@
+PHASE4-VISUAL-REFERENCE.txt
+
+Step 1: Causal Tracing
+  └─ Bug = fc2 (output weights)
+Step 2: ROME
+  └─ ΔW ≈ 0.287 (0.28% network)
+Step 3: Apply Edit
+  └─ Model updated
+Step 4: Validation
+  └─ Class 7: 0% → 97.86%
+  └─ Others: 93.47% maintained
+
+Key Metrics:
+- Bug location: fc2
+- Restoration: 94.3%
+- Edit size: 0.287 (0.28%)
+- Edit sparsity: 99.7% zeros
+- Class 7 fixed: 0% → 97.86%
+- Other classes: >90%
+- Side effects: <1.5% drop
